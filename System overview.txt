@@ -1,0 +1,69 @@
+Basic functional requirements - 
+
+System allows the passenger to enter data and admin to view and modify data on system:
+Insert passenger details and add to database
+Admin can update or delete information in database
+Admin creates databases when needed
+Payment table allows data to be inserted as soon as meal is booked
+Admin can delete meals form meal and add to deliveries done using trigger
+
+Expected requirements
+
+Function
+1. Generate Payment ID Takes meal id as input and 
+generates count of payments 
+done for that meal id. It also 
+displays information about 
+cook, meal and kitchen
+Input: Meal id
+Output: Count of payments done for 
+that meal
+
+2. Display delivery boy name Takes passenger name as 
+input and displays name of 
+delivery boy who will deliver 
+meal to them
+Input: passenger name
+Output: delivery boy name
+
+3. Track delivery Function to enable user or 
+admin to call delivery boy and 
+check status of given meal id
+Input: meal id
+Output: Delivery boy phone number
+
+4. Count meals Counts no. of meals ordered 
+from a given kitchen
+Input: kitchen id
+Output: Count of meals
+
+Procedure
+1. Display cooks and kitchen details
+Procedure is used to display 
+name of cook and the kitchen 
+they work at, when input 
+parameter is kitchen id. It also 
+retrieves count of cooks at 
+given kitchen id
+Input: kitchen id
+Output: No. of cooks working at 
+that kitchen and their details
+
+2. Display meal details Procedure to display meal 
+details and kitchen that 
+cooked it
+Input: Meal id
+Output: Meal and kitchen details
+
+Trigger
+Name: Backup of delivered meals 
+Use: Trigger will move meals deleted from meals into another tables. This indicates a delivery has been done
+Input: After delete on meal table
+Output: New record in deliveries_done
+
+Improvements / Recommendations
+1. Customer can track order using a static progress bar. Future scope involves real time tracking of the meal and delivery boy using GPS. 
+2. If meal is not delivered at station specified in payment table, delivery boy should inform admin of this delay and next station enroute of train will be requested to cover missed meal.
+3. Updates can be sent to the passenger via provided phone number or email id.
+4. Development on workbench or Oracle will be easier than backend development on MySQL command line.
+

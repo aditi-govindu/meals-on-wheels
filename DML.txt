@@ -1,0 +1,589 @@
+INSERT INTO kitchen VALUES(1,'Kranti Kitchen','VEG');
+
+INSERT INTO kitchen VALUES(2,'Mumbai Kitchen','NON VEG');
+
+INSERT INTO kitchen VALUES(3,'Punjabi Kitchen','VEGAN');
+
+INSERT INTO kitchen VALUES(4,'Kranti Kitchen','VEG');
+
+INSERT INTO kitchen VALUES(5,'MC Donalds','Mixed');
+
+INSERT INTO kitchen VALUES(6,'Yalla Yalla','VEG');
+
+INSERT INTO kitchen VALUES(7,'Manor Kitchen','NON VEG');
+
+INSERT INTO kitchen VALUES(8,'Madhuban','VEGAN');
+
+INSERT INTO kitchen VALUES(9,'Kailash ','MIXED');
+
+INSERT INTO kitchen VALUES(10,'Udupi','VEG');
+
+INSERT INTO kitchen VALUES(11,'Meghana','NON VEG');
+
+INSERT INTO kitchen VALUES(12,'Khana Khazana','VEGAN');
+
+INSERT INTO kitchen VALUES(13,'Lakshmi','MIXED');
+
+INSERT INTO kitchen VALUES(14,'Godavari','VEG');
+
+INSERT INTO kitchen VALUES(15,'Swad Punjab','NON VEG');
+
+INSERT INTO kitchen VALUES(16,'Rolls Mania','VEGAN');
+
+INSERT INTO kitchen VALUES(17,'Rolls on Wheels','MIXED');
+
+INSERT INTO kitchen VALUES(18,'Burger King','VEGAN');
+
+INSERT INTO kitchen VALUES(19,'Eassy Bites','NON VEG');
+
+INSERT INTO kitchen VALUES(20,'Balaji','MIXED');
+
+SELECT * FROM kitchen;
+
+INSERT INTO passenger VALUES
+('adams@gmail.com', 'VARSHA', 1032190848, 827522484, 101);
+
+INSERT INTO passenger VALUES
+('allen@gmail.com', 'MANGESH', 788332740, 982240354, 102);
+
+INSERT INTO passenger VALUES
+('blake@gmail.com', 'AMRUTA', 730910718, 77380972, 103);
+
+INSERT INTO passenger VALUES
+('clark@gmail.com', 'CHUDAMAN', 652134081, 961919876, 105);
+
+INSERT INTO passenger VALUES
+('ford@gmail.com', 'SAMPADA', 351101145, 978177303, 107);
+
+INSERT INTO passenger VALUES
+('james@gmail.com', 'SEEMA', 275132251, 830846028, 104);
+
+INSERT INTO passenger VALUES
+('jones@gmail.com', 'AMIT', 853545750, 750645619, 109);
+
+INSERT INTO passenger VALUES
+('king@gmail.com', 'ANEESH', 666085069, 740021758, 110);
+
+INSERT INTO passenger VALUES
+('martin@gmail.com', 'VRUSHALI', 30574633, 770475608, 106);
+
+INSERT INTO passenger VALUES
+('scott@gmail.com', 'AROHI', 775609140, 955286477, 111);
+
+INSERT INTO passenger VALUES
+('singh@gmail.com', 'VIMAL', 964077614, 882498302, 108);
+
+INSERT INTO passenger VALUES
+('smith@gmail.com', 'PARAS', 737390518, 888882570, 112);
+
+INSERT INTO passenger VALUES
+('ward@gmail.com', 'PAVAN', 855134483, 992345423, 115);
+
+INSERT INTO passenger VALUES
+('kingsley@gmail.com', 'DINA', 865645499, 914600578, 113);
+
+INSERT INTO passenger VALUES
+('farooq@gmail.com','ARAB', 919680931, 800589956, 114);
+
+SELECT * FROM passenger;
+
+INSERT INTO seating VALUES
+('adams@gmail.com', 18);
+
+INSERT INTO seating VALUES
+('allen@gmail.com', 2);
+
+INSERT INTO seating VALUES
+('blake@gmail.com', 5);
+
+INSERT INTO seating VALUES
+('clark@gmail.com', 17);
+
+INSERT INTO seating VALUES
+('ford@gmail.com', 33);
+
+INSERT INTO seating VALUES
+('james@gmail.com', 10);
+
+INSERT INTO seating VALUES
+('jones@gmail.com', 19);
+
+INSERT INTO seating VALUES
+('king@gmail.com', 24);
+
+INSERT INTO seating VALUES
+('martin@gmail.com', 11);
+
+INSERT INTO seating VALUES
+('scott@gmail.com', 20);
+
+INSERT INTO seating VALUES
+('singh@gmail.com', 45);
+
+INSERT INTO seating VALUES
+('smith@gmail.com', 30);
+
+INSERT INTO seating VALUES
+('ward@gmail.com', 63);
+
+INSERT INTO seating VALUES
+('kingsley@gmail.com', 50);
+
+INSERT INTO seating VALUES
+('farooq@gmail.com', 44);
+
+SELECT * FROM seating;
+
+INSERT INTO k_loc (KI_ID,K_location)
+Values
+(1,'pune'),
+(2,'nashik'),
+(3,'pune'),
+(4,'mumbai'),
+(5,'pune'),
+(6,'mumbai'),
+(7,'nashik'),
+(8,'chennai'),
+(9,'mumbai'),
+(10,'nashik'),
+(11,'pune'),
+(12,'chennai'),
+(13,'nashik'),
+(14,'pune'),
+(15,'mumbai'),
+(16,'pune'),
+(17,'chennai'),
+(18,'nashik'),
+(19,'pune'),
+(20,'mumbai');
+
+SELECT * FROM k_loc;
+
+INSERT INTO cook VALUES(11,'chris','Yes',36.0,NULL);
+INSERT INTO cook VALUES(12,'Rohit','Partial',36.4,NULL);
+INSERT INTO cook VALUES(13,'Rohan','No',34.0,NULL);
+INSERT INTO cook VALUES(14,'Rahul','Partial',35.5,NULL);
+INSERT INTO cook VALUES(15,'Ben','Yes',36.3,NULL);
+INSERT INTO cook VALUES(16,'Robert','Partial',34.0,NULL);
+INSERT INTO cook VALUES(17,'Mark','No',34.8,NULL);
+INSERT INTO cook VALUES(18,'Sam','Yes',33.6,NULL);
+INSERT INTO cook VALUES(19,'Tim','Partial',35.4,NULL);
+INSERT INTO cook VALUES(21,'Kartik','Yes',35.7,NULL);
+
+UPDATE cook SET K_ID=1 WHERE cook_id=11;
+UPDATE cook SET K_ID=2 WHERE cook_id=12;
+UPDATE cook SET K_ID=3 WHERE cook_id=13;
+UPDATE cook SET K_ID=4 WHERE cook_id=14;
+UPDATE cook SET K_ID=5 WHERE cook_id=15;
+UPDATE cook SET K_ID=6 WHERE cook_id=16;
+UPDATE cook SET K_ID=7 WHERE cook_id=17;
+UPDATE cook SET K_ID=8 WHERE cook_id=18;
+UPDATE cook SET K_ID=9 WHERE cook_id=19;
+UPDATE cook SET K_ID=10 WHERE cook_id=21;
+
+SELECT * FROM cook;
+
+INSERT INTO payment VALUES(101,'UPI',1,'2021-10-01',240,'6');
+INSERT INTO payment VALUES(102,'COD',2,'2021-10-01',600,'7');
+INSERT INTO payment VALUES(103,'CARD',8,'2021-10-01',800,'2');
+INSERT INTO payment VALUES(104,'UPI',4,'2021-10-01',840,'6');
+INSERT INTO payment VALUES(105,'Card',7,'2021-10-01',1200,'9');
+INSERT INTO payment VALUES(106,'UPI',3,'2021-10-01',160,'8');
+INSERT INTO payment VALUES(201,'UPI',5,'2021-10-01',600,'4');
+INSERT INTO payment VALUES(202,'COD',2,'2021-10-01',150,'3');
+INSERT INTO payment VALUES(205,'CARD',3,'2021-10-01',640,'10');
+INSERT INTO payment VALUES(301,'COD',10,'2021-10-01',120,'1');
+INSERT INTO payment VALUES(107,'UPI',7,'2021-10-01',450,'8');
+INSERT INTO payment VALUES(208,'UPI',3,'2021-10-01',160,'4');
+INSERT INTO payment VALUES(209,'COD',1,'2021-10-01',120,'3');
+INSERT INTO payment VALUES(203,'CARD',9,'2021-10-01',450,'10');
+INSERT INTO payment VALUES(309,'COD',3,'2021-10-01',160,'1');
+
+SELECT * FROM payment;
+
+INSERT INTO Admin (A_ID,A_name,A_Phone)
+VALUES
+(11,'reuben',985635241),
+(18,'pranav',988190020),
+(20,'ankit',985568625),
+(22,'aditi',985698571);
+
+SELECT * FROM admin;
+
+INSERT INTO delivery (Tracking_ID,D_Name,D_Phone,ETA,Station,Pass_Email)
+VALUES
+(24,'aryan',881569201,'2021-10-01 13:23:14','pune', 'scott@gmail.com' );
+
+INSERT INTO delivery (Tracking_ID,D_Name,D_Phone,ETA,Station,Pass_Email)
+VALUES
+(16,'manish',958384649,'2021-10-01 13:26:16','nashik','martin@gmail.com' ),
+(36,'mukesh',923456701,'2021-10-01 13:35:07','mumbai','adams@gmail.com' ),
+(72,'vijay',881558692,'2021-10-01 13:47:29', 'pune', 'allen@gmail.com'),
+(58,'danish',952369201,'2021-10-01 13:53:55','chennai','blake@gmail.com' ),
+(64,'raj',987438201,'2021-10-01 14:05:04','nashik', 'clark@gmail.com'),
+(51,'vasu',988116521,'2021-10-01 14:19:45','pune','ford@gmail.com' ),
+(39,'alex',98336681,'2021-10-01 14:23:24', 'mumbai', 'james@gmail.com'),
+(86,'sudhir',988998821,'2021-10-01 14:33:33','chennai','jones@gmail.com' ),
+(63,'mahesh',978563201,'2021-10-01 14:45:40','mumbai','king@gmail.com' ),
+(84,'mamoj',977856201,'2021-10-01 14:45:40','mumbai','singh@gmail.com' ),
+(61,'om',977853201,'2021-10-01 14:45:40','mumbai','smith@gmail.com' ),
+(49,'sai',978563201,'2021-10-01 14:45:40','mumbai','ward@gmail.com' ),
+(97,'vikas',977863201,'2021-10-01 14:45:40','mumbai','kingsley@gmail.com'),
+(21,'vinod',977863201,'2021-10-01 14:45:40','mumbai','farooq@gmail.com' );
+
+SELECT * FROM delivery;
+
+INSERT INTO meal VALUES(101,NULL,'VEG','120','2','1','16');
+
+INSERT INTO meal VALUES(102,NULL,'NON VEG','150','4','2','21');
+
+INSERT INTO meal VALUES(103,NULL,'VEGAN','160','5','8','24');
+
+INSERT INTO meal VALUES(105,NULL,'VEG','120','7','4','36');
+
+INSERT INTO meal VALUES(114,NULL,'NON VEG','150','8','7','39');
+
+INSERT INTO meal VALUES(107,NULL,'VEGAN','160','1','3','49');
+
+INSERT INTO meal VALUES(104,NULL,'VEG','120','5','5','51');
+
+INSERT INTO meal VALUES(109,NULL,'NON VEG','150','1','2','58');
+
+INSERT INTO meal VALUES(110,NULL,'VEGAN','160','4','3','61');
+
+INSERT INTO meal VALUES(113,NULL,'VEG','120','1','10','64');
+
+INSERT INTO meal VALUES(106,NULL,'NON VEG','150','3','7','63');
+
+INSERT INTO meal VALUES(111,NULL,'VEGAN','160',1,'3','72');
+
+INSERT INTO meal VALUES(108,NULL,'VEG','120','1','1','84');
+
+INSERT INTO meal VALUES(112,NULL,'NON VEG','150','3','9','86');
+
+INSERT INTO meal VALUES(115,NULL,'VEGAN','160',1,'3','97');
+
+SELECT * FROM meal;
+
+UPDATE meal SET Special_req = 'Jain' WHERE meal_id = 110;
+
+UPDATE meal SET Special_req = 'Jain' WHERE meal_id = 115;
+
+UPDATE meal SET Special_req = 'Jain' WHERE meal_id = 101;
+
+UPDATE meal SET Special_req = 'Pepperoni' WHERE meal_id = 102;
+
+UPDATE meal SET Special_req = 'Extra cheese' WHERE meal_id = 111;
+
+SELECT k.name, p.order_id, m.m_type
+FROM kitchen k, passenger p, meal m
+WHERE p.order_id = m.meal_id AND m.k_id = k.kitchen_id;
+
+SELECT type, COUNT(*)
+FROM kitchen
+GROUP BY type;
+
+SELECT amount
+FROM payment
+INNER JOIN kitchen
+WHERE payment.k_info = kitchen.kitchen_id;
+
+SELECT p.amount, p.p_mode, k.name, kl.k_location
+FROM payment p, kitchen k, k_loc kl
+WHERE p.k_info = k.kitchen_id AND p.k_info = kl.ki_id;
+
+SELECT p.amount, p.p_date, p.p_mode, k.name, kl.k_location
+FROM payment p, kitchen k, k_loc kl
+WHERE p.k_info = k.kitchen_id AND p.k_info = kl.ki_id;
+
+SELECT p.name AS 'Passenger', d.d_name AS 'Delivery boy', d.station, d.ETA, s.seat_num
+FROM passenger p, delivery d, seating s
+WHERE p.email_id = d.pass_email AND p.email_id = s.P_EmailID;
+
+CREATE VIEW passenger_food_delivery AS
+SELECT p.name AS 'Passenger', d.d_name AS 'Delivery boy', d.station, d.ETA, s.seat_num
+FROM passenger p, delivery d, seating s
+WHERE p.email_id = d.pass_email AND p.email_id = s.P_EmailID;
+
+SHOW TABLES;
+
+SELECT * FROM passenger_food_delivery;
+
+SELECT c.name, c.vac_status, k.name
+FROM cook c, kitchen k
+WHERE k.kitchen_id = c.k_id
+ORDER BY vac_status DESC;
+
+CREATE TABLE deliveries_done AS
+SELECT * FROM meal;
+
+DELETE FROM deliveries_done;
+
+DELIMITER $
+CREATE TRIGGER del_over
+AFTER DELETE
+ON meal
+FOR EACH ROW
+BEGIN
+INSERT INTO deliveries_done VALUES(
+OLD.Meal_ID,
+OLD.Special_req,
+OLD.M_Type,
+OLD.Cost,
+OLD.Quantity,
+OLD.K_ID,
+OLD.Track_ID);
+END$
+
+DELIMITER ;
+
+SELECT * FROM meal;
+
+SELECT * FROM deliveries_done;
+
+DELETE FROM meal WHERE meal_id = 101;
+
+SELECT * FROM deliveries_done;
+
+DELIMITER #
+
+CREATE procedure cook_kitchen1(IN kid INT)
+
+BEGIN
+
+/*Local variables*/
+
+DECLARE v_finished INT;
+DECLARE v_kitchenid INT;
+DECLARE v_cookid INT;
+DECLARE v_cookname VARCHAR(20);
+
+DECLARE c1 CURSOR FOR SELECT cook_id, name, k_id FROM cook;
+DECLARE CONTINUE HANDLER FOR NOT FOUND 
+	SET v_finished = 1;
+
+OPEN c1;
+
+cookid: LOOP
+FETCH c1 INTO v_cookid, v_cookname, v_kitchenid;
+
+/*Exit loop condition*/
+
+IF v_finished = 1 THEN
+LEAVE cookid;
+END IF;
+
+IF v_kitchenid = kid THEN
+SELECT CONCAT(v_cookname,' ',v_cookid);
+END IF;
+
+END LOOP;
+
+SELECT COUNT(k_id) FROM cook WHERE k_id = kid;
+
+CLOSE c1;
+
+END#
+
+CALL cook_kitchen1(7);#
+
+DELIMITER #
+
+CREATE procedure cook_kitchen2(IN kid INT)
+
+BEGIN
+
+/*Local variables*/
+
+DECLARE v_finished INT;
+DECLARE v_kitchenid INT;
+DECLARE v_cookid INT;
+DECLARE v_cookname VARCHAR(20);
+DECLARE v_kitchenname VARCHAR(20);
+
+/*Cursor 1 gets cook name while cursor 2 gets kitchen name*/
+DECLARE c1 CURSOR FOR SELECT cook_id, name, k_id FROM cook;
+DECLARE c2 CURSOR FOR SELECT name FROM kitchen;
+
+DECLARE CONTINUE HANDLER FOR NOT FOUND 
+	SET v_finished = 1;
+
+OPEN c1;
+OPEN c2;
+
+cookid: LOOP
+FETCH c1 INTO v_cookid, v_cookname, v_kitchenid;
+FETCH c2 INTO v_kitchenname;
+
+/*Exit loop condition*/
+
+IF v_finished = 1 THEN
+LEAVE cookid;
+END IF;
+
+IF v_kitchenid = kid THEN
+SELECT CONCAT(v_cookname,' works at ',v_kitchenname);
+END IF;
+
+END LOOP;
+
+SELECT COUNT(k_id) FROM cook WHERE k_id = kid;
+
+CLOSE c1;
+CLOSE c2;
+
+END#
+
+DELIMITER ;
+
+CALL cook_kitchen2(7);
+
+CALL cook_kitchen2(1);
+
+DROP PROCEDURE IF EXISTS meal_details;
+
+DELIMITER $
+CREATE PROCEDURE meal_details(IN mid INT)
+BEGIN
+
+ /*Local variables*/
+
+DECLARE v_finished INT;
+DECLARE v_mealid INT;
+DECLARE v_req VARCHAR(30);
+DECLARE v_type VARCHAR(10);
+DECLARE v_cost FLOAT;
+DECLARE v_quantity INT;
+DECLARE v_kid INT;
+DECLARE v_kname VARCHAR(20);
+DECLARE v_track INT;
+
+/*Cursor 1 gets cook name while cursor 2 gets kitchen name*/
+DECLARE c1 CURSOR FOR SELECT Meal_ID, Special_req, M_Type, Cost, Quantity, track_id FROM meal;
+DECLARE c2 CURSOR FOR SELECT kitchen_id, name FROM kitchen;
+
+DECLARE CONTINUE HANDLER FOR NOT FOUND
+SET v_finished = 1;
+
+OPEN c1;
+OPEN c2;
+
+mealinfo: LOOP
+FETCH c1 INTO v_mealid, v_req, v_type, v_cost, v_quantity, v_track;
+FETCH c2 INTO v_kid, v_kname;
+
+/*Exit loop condition*/
+
+ IF v_finished = 1 THEN
+LEAVE mealinfo;
+END IF;
+
+IF v_mealid = mid THEN
+SELECT CONCAT(v_mealid,' prepared by ',v_kname, ' has price ', v_cost, ' for meal type ',v_type);
+END IF;
+
+END LOOP;
+
+CLOSE c1;
+CLOSE c2;
+
+END $
+
+DELIMITER ;
+CALL meal_details(102);
+
+CALL meal_details(111);
+
+DROP FUNCTION IF EXISTS generate_paymentid;
+
+DELIMITER %
+
+CREATE FUNCTION generate_paymentid(mid INT)
+
+RETURNS INT
+
+DETERMINISTIC
+
+BEGIN
+
+DECLARE pid INT;
+
+SELECT COUNT(p_id) INTO pid FROM payment
+WHERE k_info = (SELECT k_id FROM meal WHERE meal_id = mid);
+RETURN pid;
+
+END %
+
+DELIMITER ;
+
+SELECT DISTINCT(generate_paymentid(102));
+FROM payment p;
+
+SELECT DISTINCT(generate_paymentid(111)), p.p_mode, p.p_date FROM payment p;
+
+DROP FUNCTION IF EXISTS dboy_name;
+
+DELIMITER $
+
+CREATE FUNCTION dboy_name(pname VARCHAR(15))
+RETURNS VARCHAR(15)
+DETERMINISTIC
+
+BEGIN
+DECLARE dname VARCHAR(15);
+SELECT delivery.D_Name
+INTO dname 
+FROM delivery JOIN passenger
+ON delivery.Pass_Email = passenger.Email_ID
+WHERE Pass_Email=(SELECT Email_ID FROM passenger
+               WHERE name=pname);
+RETURN dname;
+END $
+DELIMITER ;
+
+SELECT DISTINCT(dboy_name('VARSHA')) AS 'Delivered by' FROM delivery;
+
+SELECT DISTINCT(dboy_name('PARAS')) AS 'Delivered by' FROM delivery;
+
+DROP FUNCTION IF EXISTS track_delivery;
+
+DELIMITER ?
+
+CREATE FUNCTION track_delivery(mid INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+
+DECLARE dphone INT;
+SELECT delivery.D_Phone into dphone
+FROM delivery JOIN meal ON delivery.Tracking_ID=meal.Track_ID
+WHERE delivery.Tracking_ID= (SELECT Track_ID FROM meal
+                             WHERE Meal_ID= mid);
+RETURN dphone;
+END ?
+DELIMITER ;
+
+SELECT DISTINCT(track_delivery(111)) FROM delivery;
+
+SELECT DISTINCT(track_delivery(102)) FROM delivery;
+
+DROP FUNCTION IF EXISTS count_meal;
+DELIMITER //
+CREATE FUNCTION count_meal(kid INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+DECLARE abc INT;
+SELECT COUNT(meal.k_id) INTO abc FROM meal
+WHERE meal.k_id = kid
+GROUP BY meal.k_id;
+RETURN abc;
+END //
+
+DELIMITER ;
+
+SELECT DISTINCT(count_meal(10)) FROM kitchen k;
+
+SELECT DISTINCT(count_meal(2)) FROM kitchen;
+
+SELECT DISTINCT(count_meal(12)) FROM kitchen;

@@ -1,0 +1,26 @@
+CREATE USER 'aditi'@'localhost' IDENTIFIED BY'aditi123';
+CREATE USER 'ankit'@'localhost' IDENTIFIED BY'ankit123';
+CREATE USER 'pranav'@'localhost' IDENTIFIED BY'pranav123';
+CREATE USER 'reuben'@'localhost' IDENTIFIED BY'reuben123';
+SELECT user FROM mysql.user;
+
+GRANT SELECT ON mealsonwheels.* TO 'aditi'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'aditi'@'localhost';
+
+GRANT ALL ON mealsonwheels.* TO 'ankit'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'ankit'@'localhost';
+
+GRANT ALL ON mealsonwheels.* TO 'pranav'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'pranav'@'localhost';
+
+GRANT SELECT ON mealsonwheels.* TO 'reuben'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'reuben'@'localhost';
+
+GRANT UPDATE ON mealsonwheels.* TO 'reuben'@'localhost';
+GRANT DELETE ON mealsonwheels.* TO 'reuben'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'reuben'@'localhost';

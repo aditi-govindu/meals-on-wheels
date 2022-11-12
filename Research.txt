@@ -1,0 +1,41 @@
+Minutes of meeting
+
+This documents our findings and discussions after meetings on Google meet, throughout our mini project (Meals on Wheels) SDLC
+
+Interesting findings:
+1) Systems for e-catering today for trains do not have GPS or real time tracking. Only Zomato and Swiggy offer it to customers. Google maps can be used
+2) No information about cook or delivery boy is provided to customer, like vaccination status so can we add that in our system?
+3) Do we have to add payment in our system...can we out source to a third party like GPay or BHIM and monitor them?
+4) SQL to Python: https://towardsdatascience.com/sql-server-with-python-679b8dba69fa
+5) How to run streamlit on local machines if Google colab does not support MySQL connector?
+	To run streamlit project in local machine
+
+	1) Create file to run
+	2) Run file in terminal
+	3) Open command prompt. Run python and to view this Streamlit app on a browser, run it with the following
+  	command:
+
+    	streamlit run <location>/frontend.py
+
+	4) Copy network url from command prompt for current session use
+	Local URL: http://localhost:8501
+	Network URL: http://<ipv4 address>:<port>
+
+6) Can we display images of the food instead of a list of meals offered? This will make the system visually appealing
+
+Challenges faced in this project:
+1) Connecting so many tables with countless foreign keys became confusing at one point. We had to constantly refer to ERD and update the schema when needed
+2) While implementing the tables, our varied approach to the same problem made many contradicting statements for each table. Thus, we had to clear for each table an re-enter values that met all requirements. Eg: feedback from system is a number, not a string as decided in stage 1 of project development.
+3) Syntax errors in large queries and join commands were tough to find intially. Eg: SELCT instead of SELECT and we all were not able to find the problem for 10-20 mins.
+4) Data gathering from sites, relevant to project to ensure our system is unique in some way
+5) Documenting all our research, so we were not lost when something did not work in our system. We referred to our notes and quickly resolved issues
+6) Communication in online project management was tough as meeting when everyone was free was not possible, so we divided the work amongst us and met every Sunday when someone had an issue or wanted to celebrate a part of our system working well!
+7) Inserting data from frontend into backend using MySQL connector library
+
+References:
+1) https://meals-on-wheels-project.herokuapp.com/
+2) https://accessiblesolutions.com/meal-delivery-software
+3) http://www.kl2.com/software/browser-based-meals-on-wheels
+4) https://github.com/imvsr-0609/Meals-On-Wheels
+5) https://www.kitcat365.com/kitcat-software-for-meals-on-wheels/?lang=en
+6) https://mealsonwheelsmanager.com/

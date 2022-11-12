@@ -1,0 +1,19 @@
+CREATE TABLE deliveries_done AS
+SELECT* FROM meal;
+
+DELETE FROM deliveries_done;
+
+CREATE TRIGGER del_over
+AFTER DELETE
+ON meals
+FOR EACH ROW
+BEGIN
+INSERT INTO deliveries_done VALUES(
+OLD.Meal_ID,
+OLD.Special_req,
+OLD.M_Type,
+OLD.Cost,
+OLD.Quantity,
+OLD.K_ID,
+OLD.Track_ID);
+END

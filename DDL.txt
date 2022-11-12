@@ -1,0 +1,123 @@
+CREATE DATABASE mealsonwheels;
+
+USE mealsonwheels;
+
+CREATE TABLE passenger(
+Email_ID VARCHAR(30) PRIMARY KEY,
+Name VARCHAR(15),
+Train_PRN INT(10),
+Phone INT(10),
+Order_ID INT UNIQUE);
+
+CREATE TABLE seating(
+P_EmailID VARCHAR(30),
+Seat_Num INT);
+
+CREATE TABLE delivery(
+Tracking_ID INT PRIMARY KEY,
+D_Name VARCHAR(15),
+Pass_Email VARCHAR(30),
+D_Phone INT,
+ETA DATETIME,
+Station VARCHAR(20));
+
+CREATE TABLE cook(
+Cook_ID INT PRIMARY KEY,
+Name VARCHAR(20),
+Vac_Status Varchar(12),
+Temp_celcius DOUBLE,
+K_ID INT);
+
+CREATE TABLE meal(
+Meal_ID INT,
+Special_req VARCHAR(30),
+M_Type VARCHAR(10),
+Cost FLOAT,
+Quantity INT);
+
+ALTER TABLE meal ADD COLUMN K_ID INT;
+
+ALTER TABLE meal ADD COLUMN Track_ID INT;
+
+CREATE TABLE kitchen(
+Kitchen_ID INT PRIMARY KEY,
+Name VARCHAR(20));
+
+CREATE TABLE k_loc(
+KI_ID INT,
+K_location VARCHAR(20));
+
+CREATE TABLE admin(
+A_ID INT PRIMARY KEY,
+A_name VARCHAR(20),
+A_Phone INT);
+
+ALTER TABLE admin ADD COLUMN manage_k_id INT;
+
+CREATE TABLE payment(
+P_ID INT PRIMARY KEY,
+P_mode VARCHAR(15),
+K_info INT,
+P_date DATE,
+Amount FLOAT,
+Feedback VARCHAR(50));
+
+ALTER TABLE seating
+ADD FOREIGN KEY (P_EmailID)
+REFERENCES passenger(Email_ID);
+
+ALTER TABLE delivery
+ADD FOREIGN KEY (Pass_Email)
+REFERENCES passenger(Email_ID);
+
+ALTER TABLE meal
+ADD FOREIGN KEY (Meal_ID)
+REFERENCES passenger(Order_ID);
+
+ALTER TABLE cook
+ADD FOREIGN KEY (K_ID)
+REFERENCES kitchen(Kitchen_ID);
+
+ALTER TABLE meal
+ADD FOREIGN KEY (K_ID)
+REFERENCES kitchen(Kitchen_ID);
+
+ALTER TABLE k_loc
+ADD FOREIGN KEY (KI_ID)
+REFERENCES kitchen(Kitchen_ID);
+
+ALTER TABLE admin
+ADD FOREIGN KEY (manage_k_id)
+REFERENCES kitchen(Kitchen_ID);
+
+ALTER TABLE meal
+ADD FOREIGN KEY (Track_ID)
+REFERENCES delivery(Tracking_ID);
+
+ALTER TABLE payment
+ADD FOREIGN KEY (K_info)
+REFERENCES kitchen(Kitchen_ID);
+
+ALTER TABLE kitchen ADD type VARCHAR(10);
+
+SHOW TABLES;
+
+DESC admin;
+
+DESC cook;
+
+DESC delivery;
+
+DESC k_loc;
+
+DESC kitchen;
+
+DESC meal;
+
+DESC passenger;
+
+DESC payment;
+
+DESC seating;
+
+DESC kitchen;
